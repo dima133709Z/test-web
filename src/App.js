@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, Typography } from '@mui/material';
+import CommentList from './components/CommentList';
+import AddComment from './components/AddComment';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Container maxWidth="sm" style={{ marginTop: '20px' }}>
+            <Typography variant="h4" align="center" gutterBottom>
+                Тестовое задание
+            </Typography>
+            <AddComment />
+            <CommentList />
+        </Container>
+    );
+};
 
 export default App;
